@@ -33,4 +33,4 @@ jobs:
       - run: semgrep ci
         env:
            # Add the rules that Semgrep uses by setting the SEMGREP_RULES environment variable. 
-           SEMGREP_RULES: p/terraform # more at semgrep.dev/explore
+           SEMGREP_RULES: p/nodejs # more at semgrep.dev/explore

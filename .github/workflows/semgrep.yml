@@ -33,7 +33,6 @@ jobs:
       - run: semgrep ci --json --output findings.json
         env:
            # Add the rules that Semgrep uses by setting the SEMGREP_RULES environment variable. 
-
            SEMGREP_RULES: .semgrep/rules # more at semgrep.dev/explore
          - run: cat findings.json
          - uses: actions/upload-artifact@v2

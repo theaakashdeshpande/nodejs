@@ -35,9 +35,10 @@ jobs:
            # Add the rules that Semgrep uses by setting the SEMGREP_RULES environment variable. 
 
            SEMGREP_RULES: .semgrep/rules # more at semgrep.dev/explore
-      - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v3
-        with:
-           name: findings
-           path: output/findings.json
-           retention-days: 5
+        volumes:
+           - name: tmp
+            path: /tmp
+     - uses: actions/upload-artifact@v3
+       with:
+           name: semgrep-findings
+           path: /tmp/findings.json

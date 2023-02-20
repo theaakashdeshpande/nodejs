@@ -34,5 +34,5 @@ jobs:
         env:
            # Add the rules that Semgrep uses by setting the SEMGREP_RULES environment variable. 
 
-           SEMGREP_RULES: eslint.yml # more at semgrep.dev/explore
+           SEMGREP_RULES: .semgrep/eslint.yml # more at semgrep.dev/explore
 
